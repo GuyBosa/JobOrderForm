@@ -1,5 +1,5 @@
-Developed using Angular 8 and Ngx Schema Form 
-This is a simple form used to capture a job order, display a JSON model that will represent the dat obbject to be submited (once a backend/database platform is integrated).
+Developed using Angular 8 and Ngx Schema Form.
+This is a simple form used to capture a job order, display a JSON model that will represent the data object to be submited (once a backend/database platform is integrated).
 
 ## Development and build
 
