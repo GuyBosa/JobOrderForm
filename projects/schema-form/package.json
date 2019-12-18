@@ -1,0 +1,25 @@
+{
+  "name": "ngx-schema-form",
+  "version": "2.4.1",
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "angular",
+    "angular 7",
+    "schema",
+    "form",
+    "schema form"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=6 <=8.1",
+    "@angular/core": ">=6 <=8.1",
+    "@angular/forms": ">=6 <=8.1",
+    "@angular/platform-browser": ">=6 <=8.1",
+    "jexl": "^2.1.1",
+    "rxjs": "^6.3.3",
+    "typescript": "~3.2.2",
+    "z-schema": "^3.17.0",
+    "zone.js": "^0.8.26"
+  }
+}

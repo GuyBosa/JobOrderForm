@@ -1,0 +1,659 @@
+{
+	"$schema": "http://json-schema.org/draft-04/hyper-schema#",
+	"type": "object",
+	"properties": {
+		"takenby": {
+			"type": "string",
+			"placeholder": "Taken By",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Taken By",
+			"description": ""
+		},
+		"companyName": {
+			"type": "string",
+			"placeholder": "e.g Express Employment Professionals",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Company Name",
+			"description": ""
+		},
+		"siccode": {
+			"type": "integer",
+			"minimum": 4,
+			"maximum": 4,
+			"description": "SIC Code"
+		},
+		"telephone": {
+			"type": "integer",
+			"placeholder": "e.g. 0824629987",
+			"minimum": 10,
+			"maximum": 10,
+			"description": "Telephone"
+		},
+		"orderPlacer": {
+			"type": "string",
+			"placeholder": "e.g Guy Bosa",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Order Placer",
+			"description": ""
+		},
+		"bargainingCouncil": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Bargaining Council",
+			"description": " (if applicable)"
+		},
+		"website": {
+			"type": "string",
+			"placeholder": "e.g www.something.co.za",
+			"minLength": 2,
+			"maxLength": 20,
+			"title": "Website",
+			"description": ""
+		},
+		"department": {
+			"type": "string",
+			"placeholder": "e.g. Human Resource",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Department",
+			"description": ""
+		},
+		"email": {
+			"type": "string",
+			"placeholder": "e.g john@doe.com",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "E-mail",
+			"description": ""
+		},
+		"address": {
+			"type": "string",
+			"placeholder": "Street, Suburb, City, Province, Zip",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Address",
+			"description": ""
+		},
+		"typeofbusiness": {
+			"type": "string",
+			"placeholder": "e.g LLC",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Type Of Business",
+			"description": ""
+		},
+	"datetaken": {
+		"type": "string",
+		"format": "date",
+		"widget": "date",
+		"default": "2019-12-12",
+		"placeholder": "Ex: 2017-12-18",
+		"description": "Date Taken"
+},
+    "jobtype": {
+      "description": "Job Order Type",
+			"type": "array",
+			"items": {
+        "type": "string"
+      },
+      "widget": "array"
+    },
+		"jobordertype": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"oneOf": [
+					{
+						"description": "New Job Order",
+						"enum": [
+							"newjoborder"
+						]
+					},
+					{
+						"description": "New Client",
+						"enum": [
+							"newclient"
+						]
+					},
+					{
+						"description": "Job Order Change",
+						"enum": [
+							"joborderchange"
+						]
+					},
+					{
+						"description": "Existing Client",
+						"enum": [
+							"existingclient"
+						]
+					}
+				]
+			},
+			"widget": "checkbox"
+		},
+		"jobtitle": {
+			"type": "string",
+			"placeholder": "e.g Mid-Manager",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Job Title",
+			"description": ""
+		},
+		"projectstartdate": {
+			"type": "string",
+			"format": "date",
+			"widget": "date",
+			"default": "2019-12-12",
+			"placeholder": "Ex: 2017-12-18",
+			"description": "Project Start Date"
+		},
+		"projectenddate": {
+		"type": "string",
+		"format": "date",
+		"widget": "date",
+		"default": "2020-12-12",
+		"placeholder": "Ex: 2017-12-18",
+		"description": "Project End Date"
+		},
+		"durationforperson": {
+			"type": "string",
+			"placeholder": "e.g. 3 weeks",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "How long do you need this person?",
+			"description": ""
+		},
+		"reason": {
+			"description": "Reason For Opening",
+				  "type": "array",
+				  "items": {
+			  "type": "string"
+			}
+		  },
+		"reasonforopening": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"oneOf": [
+					{
+						"description": "Seasonal",
+						"enum": [
+							"seasonal"
+						]
+					},
+					{
+						"description": "Public Works Programme",
+						"enum": [
+							"publicworksprogramme"
+						]
+					},
+					{
+						"description": "Project",
+						"enum": [
+							"project"
+						]
+					},
+					{
+						"description": "Contingent",
+						"enum": [
+							"contingent"
+						]
+					},
+					{
+						"description": "Temporary replacement",
+						"enum": [
+							"tempreplacement"
+						]
+					},
+					{
+						"description": "Temporary increase in volumes (fluctuation overload)",
+						"enum": [
+							"tempincrease"
+						]
+					},
+					{
+						"description": "Student/Learnership Programs/Internship",
+						"enum": [
+							"prorgams"
+						]
+					},
+					{
+						"description": "Training",
+						"enum": [
+							"training"
+						]
+					},
+					{
+						"description": "Experiental",
+						"enum": [
+							"experiental"
+						]
+					},
+					{
+						"description": "Expatriate/ non-citizen",
+						"enum": [
+							"expatriate"
+						]
+					},
+					{
+						"description": "Public Job Creation Scheme",
+						"enum": [
+							"jobcreation"
+						]
+					},
+					{
+						"description": "External Source Funding",
+						"enum": [
+							"funding"
+						]
+					}
+				]
+			},
+			"widget": "checkbox"
+		},
+		"scope": {
+		  "description": "Does this position fall under scope of a bargaining council?",
+				"type": "array",
+				"items": {
+			"type": "string"
+		  },
+		  "widget": "array"
+		},
+			"fallunderscope": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"oneOf": [
+						{
+							"description": "Yes (add which council?)",
+							"enum": [
+								"yes"
+							]
+						},
+						{
+							"description": "No",
+							"enum": [
+								"no"
+							]
+						}
+					]
+				},
+				"widget": "checkbox"
+			},
+			"twentyfourmonths": {
+			  "description": "Will the task/project/period proceed for longer than 24 months?",
+					"type": "array",
+					"items": {
+				"type": "string"
+			  },
+			  "widget": "array"
+			},
+				"longerthantwentyfourmonths": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"oneOf": [
+							{
+								"description": "Yes",
+								"enum": [
+									"yes"
+								]
+							},
+							{
+								"description": "No (if no, additional remuneration of 1 week for every year will be acceptable.)",
+								"enum": [
+									"no"
+								]
+							}
+						]
+					},
+					"widget": "checkbox"
+				},
+			"threshold": {
+			  "description": "Is the annual remuneration above the threshold?",
+					"type": "array",
+					"items": {
+				"type": "string"
+			  },
+			  "widget": "array"
+			},
+				"abovethreshold": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"oneOf": [
+							{
+								"description": "Yes",
+								"enum": [
+									"yes"
+								]
+							},
+							{
+								"description": "No (if no, deemed and equal pay will not be applicable)",
+								"enum": [
+									"no"
+								]
+							}
+						]
+					},
+					"widget": "checkbox"
+				},
+		"threemonths": {
+		  "description": "Is the temp position for longer than three months?",
+				"type": "array",
+				"items": {
+			"type": "string"
+		  },
+		  "widget": "array"
+		},
+			"longerthanthreemonths": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"oneOf": [
+						{
+							"description": "Yes",
+							"enum": [
+								"yes"
+							]
+						},
+						{
+							"description": "No (if no, deemed and equal pay will not be applicable)",
+							"enum": [
+								"no"
+							]
+						}
+					]
+				},
+				"widget": "checkbox"
+			},
+		"comparablePositions": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Any comparable positions in the organization?",
+			"description": ""
+		},
+		"comparableRemuneration": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Is the remuneration comparable?",
+			"description": ""
+		},
+		"skillsrequired": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Skills required",
+			"description": ""
+		},
+		"skilllevel": {
+			"description": "Categories of Skills Level",
+				  "type": "array",
+				  "items": {
+			  "type": "string"
+			}
+		  },
+		"categoryofskillslevel": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"oneOf": [
+					{
+						"description": "Top Management ",
+						"enum": [
+							"topmanagement"
+						]
+					},
+					{
+						"description": "Skilled technical and academically qualified workers, junior management, supervisors,foremen, and superintendents",
+						"enum": [
+							"technical"
+						]
+					},
+					{
+						"description": "Senior management (excluding those counted as top management)",
+						"enum": [
+							"seniormanagement"
+						]
+					},
+					{
+						"description": "Semi-skilled and discretionary decision making",
+						"enum": [
+							"semiskilled"
+						]
+					},
+					{
+						"description": "Professionally qualified and experienced specialists and mid-management",
+						"enum": [
+							"qualified"
+						]
+					},
+					{
+						"description": " Unskilled and defined decision making",
+						"enum": [
+							"unskilled"
+						]
+					}
+				]
+			},
+			"widget": "checkbox"
+		},
+		"experiencerequired": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Experience required",
+			"description": ""
+		},
+		"educationrequired": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Education required",
+			"description": ""
+		},
+		"qualitiesrequired": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "Qualities required",
+			"description": ""
+		},
+		"whatposition": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "What position might a qualified candidate currently hold?",
+			"description": ""
+		},
+		"candidates": {
+			"description": "Suggested candidates?",
+				  "type": "array",
+				  "items": {
+			  "type": "string"
+			},
+			"widget": "array"
+		  },
+			  "suggestedcandidates": {
+				  "type": "array",
+				  "items": {
+					  "type": "string",
+					  "oneOf": [
+						  {
+							  "description": "Yes (if yes, add whom)",
+							  "enum": [
+								  "yes"
+							  ]
+						  },
+						  {
+							  "description": "No",
+							  "enum": [
+								  "no"
+							  ]
+						  }
+					  ]
+				  },
+				  "widget": "checkbox"
+			  },
+		"whatisattaractiveaboutposition": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "What is attractive about the position?",
+			"description": ""
+		},
+		"whatisunattaractiveaboutposition": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "What is unattractive about the position?",
+			"description": ""
+		},
+		"salaryrange": {
+			"description": "Salary:",
+				  "type": "array",
+				  "items": {
+			  "type": "string"
+			}
+		  },
+		"salaryrange_": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"oneOf": [
+					{
+						"description": "Low Range ",
+						"enum": [
+							"lowrannge"
+						]
+					},
+					{
+						"description": "Mid Range",
+						"enum": [
+							"midrange"
+						]
+					},
+					{
+						"description": "Top Range",
+						"enum": [
+							"toprange"
+						]
+					}
+				]
+			},
+			"widget": "checkbox"
+		},
+		"review": {
+			"type": "string",
+			"placeholder": "",
+			"minLength": 2,
+			"maxLength": 40,
+			"title": "When is first salary review?",
+			"description": ""
+		}
+		
+	},
+	"buttons": [
+		{
+			"label": "Submit",
+			"id": "alert"
+		},
+		{
+			"label": "Reset",
+			"id": "reset"
+		},
+		{
+			"label": "Disable all",
+			"id": "disable"
+		}
+	],
+	"fieldsets": [
+		{
+			"id": "part_1",
+			"title": "Part 1 - Job Order",
+			"fields": [
+				"jobtype",
+				"jobordertype",
+				"takenby",
+				"datetaken",
+				"companyName",
+				"siccode",
+				"orderPlacer",
+				"telephone",
+				"address",
+				"email",
+				"typeofbusiness",
+				"department",
+				"website",
+				"bargainingCouncil"			]
+		},
+		{
+			"id": "part_2",
+			"title": "Part 2 - Qualify Job Order",
+			"fields": [
+				"jobtitle",
+				"projectstartdate",
+				"projectenddate",
+				"durationforperson",
+				"reason",
+				"reasonforopening",
+				"scope",
+				"fallunderscope",
+				"threemonths",
+				"longerthanthreemonths",
+				"threshold",
+				"abovethreshold",
+				"twentyfourmonths",
+				"longerthantwentyfourmonths",
+				"comparablePositions",
+				"comparableRemuneration"			]
+		},
+		{
+			"id": "part_3",
+			"title": "Part 3 - POSITION REQUIREMENTS (What should the Associate/Candidate be able to DO?)",
+			"fields": [
+				"skillsrequired",
+				"skilllevel",
+				"categoryofskillslevel",
+				"experiencerequired",
+				"educationrequired",
+				"qualitiesrequired",
+				"whatposition",
+				"candidates",
+				"suggestedcandidates"
+			]
+		},
+		{
+			"id": "part_4",
+			"title": "Part 4 - CANDIDATE MOTIVATION (What would attract a candidate based on what they would GET?)",
+			"fields": [
+				"whatisattaractiveaboutposition",
+				"whatisunattaractiveaboutposition",
+				"salaryrange",
+				"salaryrange_",
+				"review"
+			]
+		}
+
+	],
+	"required": [
+		"takenby",
+		"password"
+	]
+}
